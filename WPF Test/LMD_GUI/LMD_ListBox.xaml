@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="WPF_Test.LMD_GUI.LMD_ListBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Loaded="UserControl_Loaded">
+	<UserControl.Resources>
+		<Style x:Key="MoveButtonStyle" TargetType="Button">
+			<Setter Property="Background" Value="#444444"/>
+			<Setter Property="Foreground" Value="#CCCCCC"/>
+			<Setter Property="FontSize" Value="20"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid Background="{TemplateBinding Background}">
+							<ContentPresenter 
+								HorizontalAlignment="Left" 
+								VerticalAlignment="Center"
+								Margin="10, 0, 0, 0" />
+						</Grid>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsMouseOver" Value="True">
+								<Setter Property="Background" Value="#333333"/>
+							</Trigger>
+							<Trigger Property="IsPressed" Value="True">
+								<Setter Property="Background" Value="#222222"/>
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</UserControl.Resources>
+	<Grid Background="#555555">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="7"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+		</Grid.ColumnDefinitions>
+
+		<TextBlock Grid.Row="0" Grid.Column="0" Text="Block" Foreground="White" FontSize="35" VerticalAlignment="Center" Margin="10, 0, 0, 0"/>
+		<ScrollViewer Template="{StaticResource AppleStyleScrollBarStyle}" Grid.Column="0" Grid.Row="1" Margin="0, 0, -10, 0">
+			<StackPanel Name="stackPanel" Orientation="Vertical" Background="#444444">
+				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="НАЧАЛО"		Tag="begin"			Click="Button_Click"/>
+				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="ВВОД"			Tag="input"			Click="Button_Click"/>
+				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="ВЫВОД"		Tag="output"		Click="Button_Click"/>
+				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="СЧЕТАТЬ"		Tag="calculate"		Click="Button_Click"/>
+				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="УСЛОВИЕ"		Tag="condition"		Click="Button_Click"/>
+				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="ЦИКЛ"			Tag="cycle"			Click="Button_Click"/>
+				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="ПОДПРОГРАММА" Tag="subroutine"	Click="Button_Click"/>
+				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="КОНЕЦ"		Tag="end"			Click="Button_Click"/>
+				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="СВЯЗЬ"		Tag="joint"			Click="Button_Click"/>
+				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="КАМЕРА"		Tag="camera"		Click="Button_Click"/>
+			</StackPanel>
+		</ScrollViewer>
+	</Grid>
+</UserControl>

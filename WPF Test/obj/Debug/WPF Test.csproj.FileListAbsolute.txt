@@ -1,0 +1,44 @@
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\bin\Debug\WPF Test.exe.config
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\WPF Test.csprojResolveAssemblyReference.cache
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\MainWindow.baml
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\MainWindow.g.cs
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\App.g.cs
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\WPF Test_MarkupCompile.cache
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\WPF Test.g.resources
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\WPF_Test.Properties.Resources.resources
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\WPF Test.csproj.GenerateResource.Cache
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\bin\Debug\WPF Test.exe
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\bin\Debug\WPF Test.pdb
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\WPF Test.exe
+c:\users\stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\WPF Test.pdb
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\App.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_TextBox.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_TextBox.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\WPF Test_MarkupCompile.lref
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_ListBox.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_ListBox.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_BottomPanel.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_BottomPanel.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_TopPanel.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_TopPanel.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_PropertiesPanel.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_PropertiesPanel.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_FastInformationPanel.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_FastInformationPanel.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_Workspace.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_Workspace.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_BLOCKS\BlockBegin.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_BLOCKS\BlockBegin.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_BLOCKS\BlockEnd.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_BLOCKS\BlockEnd.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_BLOCKS\BlockOutput.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_BLOCKS\BlockOutput.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_BLOCKS\BlockInput.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_BLOCKS\BlockInput.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_BLOCKS\BlockCondition.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_BLOCKS\BlockCondition.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_BLOCKS\BlockCalculate.g.cs
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_BLOCKS\BlockCalculate.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_CircleExpander.baml
+C:\Users\Stas\documents\visual studio 2012\Projects\WPF Test\WPF Test\obj\Debug\LMD_GUI\LMD_CircleExpander.g.cs

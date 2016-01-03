@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="WPF_Test.LMD_GUI.LMD_Workspace"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:lmdBlocks="clr-namespace:WPF_Test.LMD_BLOCKS"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="900">
+	<UserControl.Resources>
+	
+	</UserControl.Resources>
+	<Grid>
+		<ScrollViewer Template="{StaticResource AppleStyleScrollBarStyle}" Background="#222222" HorizontalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="1" Margin="0, 0, -10, 0">
+			<Canvas Name="canvas">
+				
+			</Canvas>
+		</ScrollViewer>
+	</Grid>
+</UserControl>

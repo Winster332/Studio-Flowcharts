@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="WPF_Test.LMD_BLOCKS.BlockCondition"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:lmdControls="clr-namespace:WPF_Test.LMD_GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="350">
+	<UserControl.Resources>
+		<Style x:Key="BlockConditionStyle" TargetType="Button">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid>
+							<ContentControl HorizontalAlignment="Center" VerticalAlignment="Center"/>
+							<Polygon Name="polygon" StrokeThickness="2" Fill="#555555" Points="175, 0, 175, 0, 300, 50, 175, 100, 50, 50"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsMouseOver" Value="True">
+								<Setter TargetName="polygon" Property="Stroke" Value="#0099FF"/>
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="EllipseJointStyle" TargetType="Button">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid>
+							<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+							<Ellipse Name="Circle1"
+                 Grid.Column="0"
+					Margin="0, 0, 0, 0"
+                 Fill="#FF9955"
+                 Width="15"
+                 Height="15"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 />
+						</Grid>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsPressed" Value="True">
+								<Setter TargetName="Circle1" Property="Fill" Value="#CC6622"/>
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		
+	</UserControl.Resources>
+    <Grid>
+		<Canvas>
+			<Line Stroke="#309955" StrokeThickness="2" X1="60" Y1="50" X2="10" Y2="50"/>
+			<Line Stroke="#309955" StrokeThickness="2" X1="290" Y1="50" X2="340" Y2="50"/>
+			
+			<Button Style="{StaticResource BlockConditionStyle}"/>
+			<lmdControls:LMD_TextBox Canvas.Left="90" Canvas.Top="40"/>
+			<Expander Name="expander" Canvas.Left="164" Margin="0, 8, 0, 0" Template="{StaticResource MyExpanderStyle}">
+				<StackPanel Margin="7, -29, 0, 0">
+					<Button Content="Связать" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
+					<Button Content="Задать имя" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
+					<Button Content="Свойства" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
+					<Button Content="Вырезать" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
+					<Button Content="Копировать" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
+					<Button Content="Удалить" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
+				</StackPanel>
+			</Expander>
+
+			<TextBlock Text="+" Canvas.Top="33" Canvas.Left="270" FontSize="20" Foreground="#CCCCCC"/>
+			<TextBlock Text="-" Canvas.Top="30" Canvas.Left="63" FontSize="25" Foreground="#CCCCCC"/>
+
+			<Button Canvas.Left="0" Canvas.Top="40" Width="20" Height="20" Click="Button_Click_1" Style="{StaticResource EllipseJointStyle}"/>
+			<Button Canvas.Left="330" Canvas.Top="40" Width="20" Height="20" Click="Button_Click_2" Style="{StaticResource EllipseJointStyle}"/>
+		<!--	<lmdControls:LMD_CircleExpander Canvas.Top="40" Canvas.Left="0"/>
+			<lmdControls:LMD_CircleExpander Canvas.Top="40" Canvas.Left="330"/> -->
+		</Canvas>
+	</Grid>
+</UserControl>
