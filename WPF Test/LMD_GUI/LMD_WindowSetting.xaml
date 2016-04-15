@@ -1,0 +1,39 @@
+﻿<Window x:Class="WPF_Test.LMD_GUI.LMD_WindowSetting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:lmd="clr-namespace:WPF_Test.LMD_GUI"
+        Title="Настройки" Height="400" Width="700"
+		Style="{DynamicResource ResourceKey=MyWindowStyle}"> 
+    <Grid>
+		<!--Все настройки-->
+		<DockPanel>
+			<StackPanel DockPanel.Dock="Top" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 8, 0, 0" 
+						Height="auto" Width="700" Background="#44000000">
+				<TextBlock Text="Использовать язык конвертации по умолчанию: " FontSize="15" VerticalAlignment="Center" Margin="8, 0, 20, 0"/>
+				<ComboBox VerticalAlignment="Center" Width="150" HorizontalAlignment="Right"/>
+			</StackPanel>
+			<StackPanel DockPanel.Dock="Top" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 0, 0, 0" 
+						Height="auto" Width="700" Background="#33FFFFFF">
+				<TextBlock Text="Язык приложения используемый в приложении: " FontSize="15" VerticalAlignment="Center" Margin="8, 0, 20, 0"/>
+				<ComboBox VerticalAlignment="Center" Width="150"/>
+			</StackPanel>
+			<StackPanel DockPanel.Dock="Top" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 0, 0, 0" 
+						Height="auto" Width="700" Background="#44000000">
+				<TextBlock Text="Стандартный путь к сохраняемым проектам: " FontSize="15" VerticalAlignment="Center" Margin="8, 0, 20, 0"/>
+				<lmd:LMD_TextBox Margin="36, 7, 0, 7"/>
+				<Button Width="100" Height="20" Content="Обзор" Margin="15, 0, 0, 0" Style="{StaticResource LMD_ButtonStyle}"/>
+			</StackPanel>
+			<StackPanel DockPanel.Dock="Top" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 0, 0, 0" 
+						Height="30" Width="700" Background="#33FFFFFF" >
+				<TextBlock Text="Предупреждать вас перед каждым закрытием окна: " FontSize="15" VerticalAlignment="Center" Margin="8, 0, 20, 0"/>
+				<CheckBox HorizontalAlignment="Center" VerticalAlignment="Center"/>
+			</StackPanel>
+		</DockPanel>
+		<!--Нижняя панель-->
+		<Rectangle Fill="#444444" Width="auto" Height="50" VerticalAlignment="Bottom"/>
+		<StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="8" Height="auto" Width="auto">
+			<Button Width="100" Height="30" Content="Применить" Style="{StaticResource LMD_ButtonStyle}" Margin="0, 0, 5, 0"/>
+			<Button Width="100" Height="30" Content="Отмена" Style="{StaticResource LMD_ButtonStyle}"/>
+		</StackPanel>
+	</Grid>
+</Window>

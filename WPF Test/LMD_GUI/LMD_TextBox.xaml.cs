@@ -20,6 +20,7 @@ namespace WPF_Test.LMD_GUI
 	/// </summary>
 	public partial class LMD_TextBox : UserControl
 	{
+		#region varaibels
 		public String Text
 		{
 			get
@@ -31,18 +32,25 @@ namespace WPF_Test.LMD_GUI
 				textBox.Text = value;
 			}
 		}
+		#endregion
+		#region LMD_TextBox
 		public LMD_TextBox()
 		{
 			InitializeComponent();
 		}
+		#endregion
+		#region Button click clear
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			ClearText();
 			textBox.Focus();
 		}
+		#endregion
+		#region Clear text
 		public void ClearText()
 		{
 			textBox.Text = "";
 		}
+		#endregion
 	}
 }

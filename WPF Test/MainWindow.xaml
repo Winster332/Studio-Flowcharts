@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:lmdControls="clr-namespace:WPF_Test.LMD_GUI"
 		xmlns:lmdBlocks="clr-namespace:WPF_Test.LMD_BLOCKS"
-        Title="MainWindow" Height="650" Width="725"
+        Title="App1 - LMD Studio Flowcharts" Height="650" Width="725"
 		WindowState="Maximized"
-		MinWidth="250"
-		MinHeight="250"
+		MinWidth="410"
+		MinHeight="300"
 		Style="{DynamicResource ResourceKey=MyWindowStyle}">
 	<Window.Resources>
 
@@ -15,7 +15,7 @@
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="200"/>
 			<ColumnDefinition Width="*"/>
-			<ColumnDefinition Width="200"/>
+	<!--	<ColumnDefinition Width="200"/> -->
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="25"/>
@@ -25,7 +25,7 @@
 		</Grid.RowDefinitions>
 		
 		<lmdControls:LMD_Workspace x:Name="workspace" Grid.Column="1" Grid.Row="1"/>
-		<lmdControls:LMD_PropertiesPanel x:Name="propertiesPanel" Grid.Column="2" Grid.Row="1"/>
+	<!--	<lmdControls:LMD_PropertiesPanel x:Name="propertiesPanel" Grid.Column="2" Grid.Row="1"/> -->
 		<lmdControls:LMD_TopPanel x:Name="topPanel" Grid.ColumnSpan="3" Grid.Row="0" Background="#444444"/>
 		<lmdControls:LMD_BottomPanel x:Name="info" Height="220" Grid.ColumnSpan="3" Grid.IsSharedSizeScope="True" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
 		<lmdControls:LMD_ListBox x:Name="blockPanel" Grid.Column="0" Grid.Row="1" Width="200" HorizontalAlignment="Left"/>

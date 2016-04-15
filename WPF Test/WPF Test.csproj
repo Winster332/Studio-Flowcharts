@@ -7,8 +7,8 @@
     <ProjectGuid>{307C0D10-39EE-4E90-9F3C-234B1DFD1CA5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WPF_Test</RootNamespace>
-    <AssemblyName>WPF Test</AssemblyName>
+    <RootNamespace>Studio_Flowcharts</RootNamespace>
+    <AssemblyName>Studio Flowcharts</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -32,6 +32,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -93,7 +97,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="LMD_GUI\LMD_ListBoxOldProjects.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_MinimizeViewPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LMD_GUI\LMD_PropertiesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_StartWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,6 +118,54 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LMD_GUI\LMD_TopPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_ViewPanelFromBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_WindowClaculate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_WindowClose.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_WindowCode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_WindowCreateProject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_WindowCreateVariables.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_WindowError.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_WindowManagerVariables.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_WindowPropertiesProject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_WindowSetNameBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_WindowSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMD_GUI\LMD_WindowSettingList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -117,6 +181,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="FileManager\INFO_PROJECT.cs" />
+    <Compile Include="FileManager\INFO_SETTING.cs" />
+    <Compile Include="FileManager\ManagerProjects.cs" />
+    <Compile Include="FileManager\ManagerSetting.cs" />
     <Compile Include="LMD_BLOCKS\BlockBegin.xaml.cs">
       <DependentUpon>BlockBegin.xaml</DependentUpon>
     </Compile>
@@ -142,13 +210,26 @@
     <Compile Include="LMD_BLOCKS\BLOCK_JOINT\CONDITION.cs" />
     <Compile Include="LMD_BLOCKS\BLOCK_JOINT\END.cs" />
     <Compile Include="LMD_BLOCKS\BLOCK_JOINT\INPUT.cs" />
+    <Compile Include="LMD_BLOCKS\BLOCK_JOINT\ManagerJoints.cs" />
     <Compile Include="LMD_BLOCKS\BLOCK_JOINT\OUTPUT.cs" />
     <Compile Include="LMD_Compiling\CompilingManager.cs" />
-    <Compile Include="LMD_Compiling\LanguageProgrammingManager.cs" />
+    <Compile Include="LMD_Compiling\ExceptionBlockInput.cs" />
+    <Compile Include="LMD_Compiling\ExceptionsBlocks\BaseExceptionBlock.cs" />
+    <Compile Include="LMD_Compiling\ExceptionsBlocks\ExceptionBlockCondition.cs" />
+    <Compile Include="LMD_Compiling\ExceptionsBlocks\ExceptionBlockOutput.cs" />
+    <Compile Include="LMD_Compiling\ExceptionsBlocks\ExceptionCalculate.cs" />
+    <Compile Include="LMD_Compiling\ExceptionsBlocks\ExceptionNotBegin.cs" />
+    <Compile Include="LMD_Compiling\ExceptionsBlocks\ExceptionNotConnect.cs" />
+    <Compile Include="LMD_Compiling\ExceptionsBlocks\ExceptionNotEnd.cs" />
+    <Compile Include="LMD_Compiling\INFO_VARIABLE.cs" />
+    <Compile Include="LMD_Compiling\Language\BLOCK_CODE_CONTROL_ERROR.cs" />
     <Compile Include="LMD_Compiling\Language\C_PlusPlus.cs" />
     <Compile Include="LMD_Compiling\Language\C_Sharp.cs" />
     <Compile Include="LMD_Compiling\Language\Java.cs" />
+    <Compile Include="LMD_Compiling\Language\ManagerError.cs" />
+    <Compile Include="LMD_Compiling\Language\ManagerLanguage.cs" />
     <Compile Include="LMD_Compiling\Language\PascalABC.cs" />
+    <Compile Include="LMD_Compiling\ManagerVariables.cs" />
     <Compile Include="LMD_GUI\LMD_BottomPanel.xaml.cs">
       <DependentUpon>LMD_BottomPanel.xaml</DependentUpon>
     </Compile>
@@ -161,8 +242,17 @@
     <Compile Include="LMD_GUI\LMD_ListBox.xaml.cs">
       <DependentUpon>LMD_ListBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LMD_GUI\LMD_ListBoxOldProjects.xaml.cs">
+      <DependentUpon>LMD_ListBoxOldProjects.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_MinimizeViewPanel.xaml.cs">
+      <DependentUpon>LMD_MinimizeViewPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LMD_GUI\LMD_PropertiesPanel.xaml.cs">
       <DependentUpon>LMD_PropertiesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_StartWindow.xaml.cs">
+      <DependentUpon>LMD_StartWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="LMD_GUI\LMD_TextBox.xaml.cs">
       <DependentUpon>LMD_TextBox.xaml</DependentUpon>
@@ -170,9 +260,46 @@
     <Compile Include="LMD_GUI\LMD_TopPanel.xaml.cs">
       <DependentUpon>LMD_TopPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LMD_GUI\LMD_ViewPanelFromBlock.xaml.cs">
+      <DependentUpon>LMD_ViewPanelFromBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_WindowClaculate.xaml.cs">
+      <DependentUpon>LMD_WindowClaculate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_WindowClose.xaml.cs">
+      <DependentUpon>LMD_WindowClose.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_WindowCode.xaml.cs">
+      <DependentUpon>LMD_WindowCode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_WindowCreateProject.xaml.cs">
+      <DependentUpon>LMD_WindowCreateProject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_WindowCreateVariables.xaml.cs">
+      <DependentUpon>LMD_WindowCreateVariables.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_WindowError.xaml.cs">
+      <DependentUpon>LMD_WindowError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_WindowManagerVariables.xaml.cs">
+      <DependentUpon>LMD_WindowManagerVariables.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_WindowPropertiesProject.xaml.cs">
+      <DependentUpon>LMD_WindowPropertiesProject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_WindowSetNameBlock.xaml.cs">
+      <DependentUpon>LMD_WindowSetNameBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_WindowSetting.xaml.cs">
+      <DependentUpon>LMD_WindowSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMD_GUI\LMD_WindowSettingList.xaml.cs">
+      <DependentUpon>LMD_WindowSettingList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LMD_GUI\LMD_Workspace.xaml.cs">
       <DependentUpon>LMD_Workspace.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LMD_NET\ManagerNet.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

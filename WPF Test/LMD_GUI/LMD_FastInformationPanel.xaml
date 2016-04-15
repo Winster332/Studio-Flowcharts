@@ -6,5 +6,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="25" d:DesignWidth="600">
     <Grid Background="#00AADD">
+        <ProgressBar Name="pb" HorizontalAlignment="Right" Height="16" Margin="0,2,5,0" VerticalAlignment="Top" Width="124" Background="#FF83EE79"/>
+        <TextBlock x:Name="tb_info" HorizontalAlignment="Left" Margin="5,2,0,0" TextWrapping="Wrap" Text="Готово" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="tb_mouse" HorizontalAlignment="Left" Margin="243,2,0,0" TextWrapping="Wrap" Text="Mouse { 0, 0 }" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock x:Name="tb_block" HorizontalAlignment="Left" Margin="405,2,0,0" TextWrapping="Wrap" Text="Block: none" VerticalAlignment="Top" Foreground="White"/>
     </Grid>
 </UserControl>

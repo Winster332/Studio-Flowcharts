@@ -20,13 +20,17 @@ namespace WPF_Test.LMD_GUI
 	/// </summary>
 	public partial class LMD_CircleExpander : UserControl
 	{
+		#region variables
 		public delegate void ClickExpanderItems(LMD_BLOCKS.EXPANDER_FUNCTION function, UIElement element);
 		public event ClickExpanderItems expanderClickItem;
+		#endregion
+		#region LMD_CircleExpander
 		public LMD_CircleExpander()
 		{
 			InitializeComponent();
 		}
-
+		#endregion
+		#region Button click
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			expander.IsExpanded = false;
@@ -45,4 +49,5 @@ namespace WPF_Test.LMD_GUI
 				expanderClickItem(func, this);
 		}
 	}
+		#endregion
 }

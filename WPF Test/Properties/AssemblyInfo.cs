@@ -7,19 +7,19 @@ using System.Windows;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("WPF Test")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Studio Flowcharts")]
+[assembly: AssemblyDescription("Приложение для построения блок-схем")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WPF Test")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCompany("LMD")]
+[assembly: AssemblyProduct("Studio Flowcharts")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Параметр ComVisible со значением FALSE делает типы в сборке невидимыми 
 // для COM-компонентов.  Если требуется обратиться к типу в этой сборке через 
 // COM, задайте атрибуту ComVisible значение TRUE для этого типа.
-[assembly: ComVisible(false)]
+[assembly: ComVisible(true)]
 
 //Чтобы начать построение локализованных приложений, задайте 
 //<UICulture>CultureYouAreCodingWith</UICulture> в файле .csproj

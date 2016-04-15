@@ -1,0 +1,255 @@
+﻿<Window x:Class="WPF_Test.LMD_GUI.LMD_WindowClaculate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:lmd="clr-namespace:WPF_Test.LMD_GUI"
+        Title="Менеджер формул" Height="350" Width="350"
+		Style="{DynamicResource ResourceKey=MyWindowStyle}">
+	<Window.Resources>
+		<SolidColorBrush x:Key="colorLeftButton">#446644</SolidColorBrush>
+		<SolidColorBrush x:Key="colorRightButton">#444444</SolidColorBrush>
+	</Window.Resources>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="80"/>
+			<ColumnDefinition Width="100"/>
+			<ColumnDefinition Width="50"/>
+			<ColumnDefinition Width="120"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+		</Grid.RowDefinitions>
+		
+		<Button Grid.Column="0" Grid.Row="0" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="cos">
+			<Button.Content>
+				<TextBlock Text="cos(x)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="0" Grid.Row="1" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="sin">
+			<Button.Content>
+				<TextBlock Text="sin(x)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="0" Grid.Row="2" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="sqrt">
+			<Button.Content>
+				<TextBlock Text="sqrt(x)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="0" Grid.Row="3" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="arccos">
+			<Button.Content>
+				<TextBlock Text="arccos(x)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="0" Grid.Row="4" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="arctg">
+			<Button.Content>
+				<TextBlock Text="arctg(x)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="0" Grid.Row="5" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15"  Click="Button_Click" Tag="exp">
+			<Button.Content>
+				<TextBlock Text="exp(x)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="0" Grid.Row="6" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15"  Click="Button_Click" Tag="fabs">
+			<Button.Content>
+				<TextBlock Text="fabs(x)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="0" Grid.Row="7" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15"  Click="Button_Click" Tag="log">
+			<Button.Content>
+				<TextBlock Text="log(x)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="0" Grid.Row="8" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15"  Click="Button_Click" Tag="log10">
+			<Button.Content>
+				<TextBlock Text="log10(x)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="0" Grid.Row="9" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="tan">
+			<Button.Content>
+				<TextBlock Text="tan(x)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="0" Grid.Row="10" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="pow">
+			<Button.Content>
+				<TextBlock Text="pow(x, y)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="0" Grid.Row="11" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="asin">
+			<Button.Content>
+				<TextBlock Text="asin(x)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="0" Grid.Row="12" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15"  Click="Button_Click" Tag="atan">
+			<Button.Content>
+				<TextBlock Text="atan(x)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+
+		<Button Grid.Column="1" Grid.Row="0" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="косинус от x" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="1" Grid.Row="1" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="синус от x" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="1" Grid.Row="2" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="корень из x" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="1" Grid.Row="3" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="арккосинус" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="1" Grid.Row="4" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="арктангенс" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="1" Grid.Row="5" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="эпсель от x" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="1" Grid.Row="6" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="модуль x" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="1" Grid.Row="7" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="логорифм x" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="1" Grid.Row="8" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="логорифм 10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="1" Grid.Row="9" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="тангенс от x" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="1" Grid.Row="10" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="степень x^y" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="1" Grid.Row="11" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="арксинус" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="1" Grid.Row="12" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="арктангенс" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+
+		<Button Grid.Column="2" Grid.Row="0" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="+">
+			<Button.Content>
+				<TextBlock Text="+" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="2" Grid.Row="1" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15"  Click="Button_Click" Tag="-">
+			<Button.Content>
+				<TextBlock Text="-" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="2" Grid.Row="2" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="*">
+			<Button.Content>
+				<TextBlock Text="*" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="2" Grid.Row="3" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15"  Click="Button_Click" Tag="/">
+			<Button.Content>
+				<TextBlock Text="/" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="2" Grid.Row="4" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15"  Click="Button_Click" Tag="and">
+			<Button.Content>
+				<TextBlock Text="и" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="2" Grid.Row="5" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="or">
+			<Button.Content>
+				<TextBlock Text="или" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="2" Grid.Row="6" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="=">
+			<Button.Content>
+				<TextBlock Text="=" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="2" Grid.Row="7" Background="{StaticResource colorLeftButton}" Foreground="#CCCCCC" FontSize="15" Click="Button_Click" Tag="==">
+			<Button.Content>
+				<TextBlock Text="==" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+
+		<Button Grid.Column="3" Grid.Row="0" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="сложение" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="3" Grid.Row="1" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="вычитание" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="3" Grid.Row="2" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="умножение" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="3" Grid.Row="3" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="деление" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="3" Grid.Row="4" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="логическое и" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="3" Grid.Row="5" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="логическое или" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="3" Grid.Row="6" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="присваивание" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		<Button Grid.Column="3" Grid.Row="7" Background="{StaticResource colorRightButton}" Foreground="#CCCCCC" FontSize="15">
+			<Button.Content>
+				<TextBlock Text="сравнивание" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			</Button.Content>
+		</Button>
+		
+		<TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="8" Text="Целевое выражение" FontSize="15" Margin="12, 2, 0, 0"/>
+		<lmd:LMD_TextBox x:Name="txtView" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<Button Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="10" Style="{StaticResource LMD_ButtonStyle}" Content="Создать переменную" Click="Button_Click_3"/>
+		<Button Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="11" Style="{StaticResource LMD_ButtonStyle}" Content="Сохранить выражение" Click="Button_Click_1"/>
+		<Button Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="12" Style="{StaticResource LMD_ButtonStyle}" Content="Закрыть менеджер" Click="Button_Click_2"/>
+	</Grid>
+</Window>

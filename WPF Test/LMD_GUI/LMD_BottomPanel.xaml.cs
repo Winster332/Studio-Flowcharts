@@ -74,7 +74,6 @@ namespace WPF_Test.LMD_GUI
 		private void Button_Click_1(object sender, RoutedEventArgs e)
 		{
 			ClearDate();
-			AddItemText("-----------------------------------Hello World-----------------------------------");
 		}
 		#endregion
 		#region ClearDate
@@ -84,6 +83,7 @@ namespace WPF_Test.LMD_GUI
 		public void ClearDate()
 		{
 			stackPanel.Children.Clear();
+			AddItemText("-----------------------------------Hello World-----------------------------------");
 		}
 		#endregion
 		#region button click close

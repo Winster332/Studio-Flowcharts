@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace WPF_Test.LMD_BLOCKS
 {
-	public enum TYPE_LINE { standart, marshrut, standart_end, condition, line_line, line_block }
+	public enum TYPE_LINE { standart, marshrut, standart_end, condition, line_line, line_block, end_condition }
 	public class BlockJoint
 	{
 		#region variables
@@ -25,18 +25,23 @@ namespace WPF_Test.LMD_BLOCKS
 		private LMD_GUI.LMD_Workspace workspace;
 		private double _x;
 		private double _y;
+		private BlockJoint block_next;
+	//	public LMD_BLOCKS.BLOCK_JOINT.BASE_BLOCK joint;
 		public TYPE_LINE type_line;
 		public UIElement element_begin;
 		public UIElement element_end;
-		public UIElement element_and_end;
+		public LMD_BLOCKS.BLOCK_JOINT.STATE_BLOCK State;
 
 		public delegate void CreateNewJoint(BlockJoint joint);
 		public event CreateNewJoint createNewJoint;
+		public delegate void RemoveNewJoint(BlockJoint joint);
+		public event RemoveNewJoint removeJoint;
 		#endregion
 		#region BlockJoint
 		public BlockJoint(LMD_GUI.LMD_Workspace workspace)
 		{
 			this.workspace = workspace;
+			this.State = BLOCK_JOINT.STATE_BLOCK.none;
 		}
 		#endregion
 		#region Create
@@ -97,7 +102,26 @@ namespace WPF_Test.LMD_BLOCKS
 
 			workspace.selectJoint = null;
 
+			/*
+			if (element_begin.GetType() == typeof(LMD_BLOCKS.BlockBegin))
+				joint.Type = LMD_GUI.TYPE_BLOCK.begin;
+			else if (element_begin.GetType() == typeof(LMD_BLOCKS.BlockEnd))
+				joint.Type = LMD_GUI.TYPE_BLOCK.end;
+			else if (element_begin.GetType() == typeof(LMD_BLOCKS.BlockCalculate))
+				joint.Type = LMD_GUI.TYPE_BLOCK.calculate;
+			else if (element_begin.GetType() == typeof(LMD_BLOCKS.BlockCondition))
+				joint.Type = LMD_GUI.TYPE_BLOCK.condition;
+			else if (element_begin.GetType() == typeof(LMD_BLOCKS.BlockInput))
+				joint.Type = LMD_GUI.TYPE_BLOCK.input;
+			else if (element_begin.GetType() == typeof(LMD_BLOCKS.BlockOutput))
+				joint.Type = LMD_GUI.TYPE_BLOCK.output;
+
+			joint.element_begin = element_begin;
+			joint.element_end = element_end;
+			*/
 			createNewJoint(this);
+
+			expander.Tag = this;
 		}
 		/// <summary>
 		/// Создает связь на частичных данных
@@ -148,6 +172,8 @@ namespace WPF_Test.LMD_BLOCKS
 			workspace.selectJoint = null;
 
 			createNewJoint(this);
+			expander.Tag = this;
+
 		}
 		/// <summary>
 		/// Создает связь основаную на старых координатах связи
@@ -182,6 +208,7 @@ namespace WPF_Test.LMD_BLOCKS
 			workspace.selectJoint = null;
 
 			createNewJoint(this);
+			expander.Tag = this;
 		}
 		/// <summary>
 		/// Создает связь на старых координатах основаную на новом объекте
@@ -233,6 +260,7 @@ namespace WPF_Test.LMD_BLOCKS
 			workspace.selectJoint = null;
 
 			createNewJoint(this);
+			expander.Tag = this;
 		}
 		#endregion
 		#region SelectXY
@@ -245,21 +273,30 @@ namespace WPF_Test.LMD_BLOCKS
 		#region expander click items
 		private void expander_expanderClickItem(EXPANDER_FUNCTION function, UIElement element)
 		{
+			BlockJoint bj = (BlockJoint)((LMD_GUI.LMD_CircleExpander)element).Tag; // Блок следующей/предидущей связи
 			switch(function)
 			{
 				case EXPANDER_FUNCTION.joint:
 					if (workspace.selectJoint == null)
 					{
 						workspace.selectJoint = new BlockJoint(workspace);
+						workspace.selectJoint.element_begin = bj.element_begin;
 						workspace.selectJoint.createNewJoint += workspace.selectJoint_createNewJoint;
+						workspace.selectJoint.removeJoint += workspace.selectJoint_removeJoint;
 						workspace.selectJoint.SelectXY(Canvas.GetLeft(element) + 10, Canvas.GetTop(element) + 10);
 						workspace.selectJoint.type_line = TYPE_LINE.line_block;
 						workspace.joint_select = true;
 					}
-					else if (workspace.selectJoint != null)
+					else if (workspace.selectJoint != null) // Линия к линии
 					{
-						workspace.selectJoint.CreateOldXY(workspace.canvas, Canvas.GetLeft(element) + 10, Canvas.GetTop(element) + 10);
+						SelectXY(Canvas.GetLeft(workspace.selectJoint.element_begin) + 10,
+							Canvas.GetTop(workspace.selectJoint.element_begin) + 10);
+						workspace.selectJoint.type_line = TYPE_LINE.end_condition;
+						workspace.selectJoint.element_end = bj.element_begin;
+						workspace.selectJoint.Create(workspace.canvas, Canvas.GetLeft(element) + 10, Canvas.GetTop(element) + 10);
 						workspace.joint_select = false;
+
+						createNewJoint(this);
 					}
 					break;
 				case EXPANDER_FUNCTION.properties: break;
@@ -270,11 +307,36 @@ namespace WPF_Test.LMD_BLOCKS
 		#region ThisRemove
 		public void ThisRemove()
 		{
+			removeJoint(this);
+
 			parent_canvas.Children.Remove(expander);
 			parent_canvas.Children.Remove(line);
 			element_begin = null;
 			element_end = null;
-			element_and_end = null;
+		}
+		#endregion
+		#region GetNext
+		public BlockJoint GetNext()
+		{
+			return this.block_next;
+		}
+		#endregion
+		#region SetNext
+		public void SetNext(BlockJoint block)
+		{
+			this.block_next = block;
+		}
+		#endregion
+		#region GetLine
+		public UIElement GetLine()
+		{
+			return line;
+		}
+		#endregion
+		#region GetExpanderCircle
+		public UIElement GetExpanderCircle()
+		{
+			return expander;
 		}
 		#endregion
 	}

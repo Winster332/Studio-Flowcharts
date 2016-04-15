@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="25" d:DesignWidth="750">
+             d:DesignHeight="25" d:DesignWidth="850">
 	<UserControl.Resources>
 		<Style x:Key="MenuButtonStyle" TargetType="Button">
 			<Setter Property="Background" Value="#444444"/>
@@ -52,16 +52,17 @@
 	</UserControl.Resources>
 	<Grid>
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-			<Button Width="90" Height="25" Content="СОЗДАТЬ" Style="{StaticResource MenuButtonStyle}"/>
-			<Button Width="90" Height="25" Content="ОТКРЫТЬ" Style="{StaticResource MenuButtonStyle}"/>
-			<Button Width="100" Height="25" Content="СОХРАНИТЬ" Style="{StaticResource MenuButtonStyle}"/>
-			<Button Width="100" Height="25" Content="НАСТРОЙКИ" Style="{StaticResource MenuButtonStyle}"/>
-			<Button Width="80" Height="25" Content="ПРОЕКТ" Style="{StaticResource MenuButtonStyle}"/>
-			<Button Width="100" Height="25" Content="ЗАПУСТИТЬ" Style="{StaticResource ButtonStartStyle}" Click="Button_Click" />
-			<Button Width="90" Height="25" Content="ГЛАВНАЯ" Style="{StaticResource MenuButtonStyle}"/>
-			<Button Width="50" Height="25" Content="КОД" Style="{StaticResource MenuButtonStyle}"/>
-			<Button Width="80" Height="25" Content="СПРАВКА" Style="{StaticResource MenuButtonStyle}"/>
-			<Button Width="80" Height="25" Content="ВЫЙТИ" Style="{StaticResource MenuButtonStyle}"/>
+			<Button Width="90" Height="25" Content="СОЗДАТЬ" Style="{StaticResource MenuButtonStyle}" Click="Button_Click" Tag="СОЗДАТЬ"/>
+			<Button Width="90" Height="25" Content="ОТКРЫТЬ" Style="{StaticResource MenuButtonStyle}" Click="Button_Click" Tag="ОТКРЫТЬ"/>
+			<Button Width="100" Height="25" Content="СОХРАНИТЬ" Style="{StaticResource MenuButtonStyle}" Click="Button_Click" Tag="СОХРАНИТЬ"/>
+			<Button Width="100" Height="25" Content="НАСТРОЙКИ" Style="{StaticResource MenuButtonStyle}" Click="Button_Click" Tag="НАСТРОЙКИ"/>
+			<Button Width="80" Height="25" Content="ПРОЕКТ" Style="{StaticResource MenuButtonStyle}" Click="Button_Click" Tag="ПРОЕКТ"/>
+			<Button Width="100" Height="25" Content="ЗАПУСТИТЬ" Style="{StaticResource ButtonStartStyle}" Click="Button_Click" Tag="ЗАПУСТИТЬ"/>
+			<Button Width="90" Height="25" Content="ГЛАВНАЯ" Style="{StaticResource MenuButtonStyle}" Click="Button_Click" Tag="ГЛАВНАЯ"/>
+			<Button Width="100" Height="25" Content="ПЕРЕМЕННЫЕ" Style="{StaticResource MenuButtonStyle}" Click="Button_Click" Tag="ПЕРЕМЕННЫЕ"/>
+			<Button Width="50" Height="25" Content="КОД" Style="{StaticResource MenuButtonStyle}" Click="Button_Click" Tag="КОД"/>
+			<Button Width="80" Height="25" Content="СПРАВКА" Style="{StaticResource MenuButtonStyle}" Click="Button_Click" Tag="СПРАВКА"/>
+			<Button Width="80" Height="25" Content="ВЫЙТИ" Style="{StaticResource MenuButtonStyle}" Click="Button_Click" Tag="ВЫХОД"/>
 		</StackPanel>
 	</Grid>
 </UserControl>

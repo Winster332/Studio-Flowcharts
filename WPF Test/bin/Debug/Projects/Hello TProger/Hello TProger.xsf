@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<INFO_CONFIG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <file_block>Projects\Hello TProger\Blocks.xml</file_block>
+  <file_setting>Projects\Hello TProger\Config.xml</file_setting>
+</INFO_CONFIG>

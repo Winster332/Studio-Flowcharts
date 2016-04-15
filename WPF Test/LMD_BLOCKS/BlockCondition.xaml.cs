@@ -20,15 +20,19 @@ namespace WPF_Test.LMD_BLOCKS
 	/// </summary>
 	public partial class BlockCondition : UserControl
 	{
-		public BlockCondition()
-		{
-			InitializeComponent();
-		}
-
+		#region variables
 		public delegate void ExpanderClickItems(EXPANDER_FUNCTION function, UIElement element);
 		public event ExpanderClickItems expanderClickItem;
 		public delegate void ClickJoint(UIElement element, int num);
 		public event ClickJoint clickJoint;
+		#endregion
+		#region BlockCondition
+		public BlockCondition()
+		{
+			InitializeComponent();
+		}
+		#endregion
+		#region Button click
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			expander.IsExpanded = false;
@@ -49,17 +53,28 @@ namespace WPF_Test.LMD_BLOCKS
 			if (expanderClickItem != null)
 				expanderClickItem(func, this);
 		}
-
+		#endregion
+		#region Button click j = 0
 		private void Button_Click_1(object sender, RoutedEventArgs e)
 		{
 			if (clickJoint != null)
 				clickJoint(this, 0);
 		}
-
+		#endregion
+		#region Button click j = 1
 		private void Button_Click_2(object sender, RoutedEventArgs e)
 		{
 			if (clickJoint != null)
 				clickJoint(this, 1);
 		}
+		#endregion
+		#region Add F(X)
+		private void Button_Click_3(object sender, RoutedEventArgs e)
+		{
+			LMD_GUI.LMD_WindowClaculate wc = new LMD_GUI.LMD_WindowClaculate();
+			wc.ShowDialog();
+			this.txtView.Text = wc.Text;
+		}
+		#endregion
 	}
 }

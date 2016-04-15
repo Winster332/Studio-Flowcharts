@@ -20,13 +20,17 @@ namespace WPF_Test.LMD_BLOCKS
 	/// </summary>
 	public partial class BlockInput : UserControl
 	{
+		#region variables
+		public delegate void ExpanderClickItems(EXPANDER_FUNCTION function, UIElement element);
+		public event ExpanderClickItems expanderClickItem;
+		#endregion
+		#region BlickInput
 		public BlockInput()
 		{
 			InitializeComponent();
 		}
-
-		public delegate void ExpanderClickItems(EXPANDER_FUNCTION function, UIElement element);
-		public event ExpanderClickItems expanderClickItem;
+		#endregion
+		#region Button click menu
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			expander.IsExpanded = false;
@@ -47,5 +51,44 @@ namespace WPF_Test.LMD_BLOCKS
 			if (expanderClickItem != null)
 				expanderClickItem(func, this);
 		}
+		#endregion
+		#region Button click add var
+		private void Button_Click_1(object sender, RoutedEventArgs e)
+		{
+			LMD_GUI.LMD_WindowCreateVariables wcv = new LMD_GUI.LMD_WindowCreateVariables(this);
+			wcv.ShowDialog();
+		}
+		#endregion
+		#region UpDateComboBox
+		public void UpDateComboBox()
+		{
+			String present_text = comboBox_all_variables.Text;
+			comboBox_all_variables.Items.Clear();
+
+			List<LMD_Compiling.INFO_VARIABLE> list = LMD_Compiling.ManagerVariables.GetAllVariables();
+			for (int i = 0; i < LMD_Compiling.ManagerVariables.Count; i++)
+				comboBox_all_variables.Items.Add(list[i].name);
+
+			comboBox_all_variables.Text = present_text;
+		}
+		#endregion
+		#region Mouse enter to button
+		private void Button_MouseEnter(object sender, MouseEventArgs e)
+		{
+			UpDateComboBox();
+		}
+		#endregion
+		#region GetPreviewText
+		public String GetPreviewText()
+		{
+			return txtBox_view.Text;
+		}
+		#endregion
+		#region GetVariable
+		public String GetVariable()
+		{
+			return comboBox_all_variables.Text;
+		}
+		#endregion
 	}
 }

@@ -1,0 +1,23 @@
+﻿<Window x:Class="WPF_Test.LMD_GUI.LMD_WindowError"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Кажется ошибочка произошла" Height="250" Width="300"
+		Style="{StaticResource MyWindowStyle}">
+    <Grid>
+		<TextBlock Name="text" HorizontalAlignment="Left" Margin="10,104,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="13" Foreground="#CCCCCC"/>
+		<StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0, 5" Orientation="Horizontal">
+			<Button Width="100" Height="30" Style="{StaticResource LMD_ButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Понял" Click="Button_Click"/>
+			<Button Width="100" Height="30" Style="{StaticResource LMD_ButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Не понял" Margin="5, 0, 0, 0" Click="Button_Click_1"/>
+		</StackPanel>
+		<TextBlock x:Name="text_Copy" HorizontalAlignment="Left" Margin="123,-31,0,0" TextWrapping="Wrap" Text=":(" VerticalAlignment="Top" FontSize="103" Foreground="#CCCCCC" RenderTransformOrigin="0.5,0.5">
+			<TextBlock.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="90.168"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</TextBlock.RenderTransform>
+		</TextBlock>
+	</Grid>
+</Window>

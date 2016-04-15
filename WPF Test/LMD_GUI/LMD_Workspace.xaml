@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 			 xmlns:lmdBlocks="clr-namespace:WPF_Test.LMD_BLOCKS"
+			 xmlns:lmd="clr-namespace:WPF_Test.LMD_GUI"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="900">
 	<UserControl.Resources>
@@ -12,7 +13,6 @@
 	<Grid>
 		<ScrollViewer Template="{StaticResource AppleStyleScrollBarStyle}" Background="#222222" HorizontalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="1" Margin="0, 0, -10, 0">
 			<Canvas Name="canvas">
-				
 			</Canvas>
 		</ScrollViewer>
 	</Grid>

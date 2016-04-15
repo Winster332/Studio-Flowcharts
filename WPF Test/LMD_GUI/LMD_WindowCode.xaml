@@ -1,0 +1,18 @@
+﻿<Window x:Class="WPF_Test.LMD_GUI.LMD_WindowCode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Код проекта" Height="500" Width="700"
+		Style="{DynamicResource ResourceKey=MyWindowStyle}">
+    <Grid>
+		
+		<RichTextBox Name="rtb" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" 
+					 Height="690" Background="#333333" BorderThickness="0" Foreground="#CCCCCC">
+			<FlowDocument>
+				<Paragraph Name="paragraph">
+					<Run Name="txt" Text="Если здесь ничего нет, значит вы еще не разу не скомпилировали проект. Чтоб код появился, создайте программу из блоков и запустите ее."/>
+				</Paragraph>
+			</FlowDocument>
+		</RichTextBox>
+
+	</Grid>
+</Window>

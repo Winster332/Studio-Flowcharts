@@ -47,13 +47,13 @@
 				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="НАЧАЛО"		Tag="begin"			Click="Button_Click"/>
 				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="ВВОД"			Tag="input"			Click="Button_Click"/>
 				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="ВЫВОД"		Tag="output"		Click="Button_Click"/>
-				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="СЧЕТАТЬ"		Tag="calculate"		Click="Button_Click"/>
+				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="СЧИТАТЬ"		Tag="calculate"		Click="Button_Click"/>
 				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="УСЛОВИЕ"		Tag="condition"		Click="Button_Click"/>
-				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="ЦИКЛ"			Tag="cycle"			Click="Button_Click"/>
-				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="ПОДПРОГРАММА" Tag="subroutine"	Click="Button_Click"/>
+		<!--	<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="ЦИКЛ"			Tag="cycle"			Click="Button_Click"/> -->
+		<!--	<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="ПОДПРОГРАММА" Tag="subroutine"	Click="Button_Click"/> -->
 				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="КОНЕЦ"		Tag="end"			Click="Button_Click"/>
-				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="СВЯЗЬ"		Tag="joint"			Click="Button_Click"/>
-				<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="КАМЕРА"		Tag="camera"		Click="Button_Click"/>
+		<!--	<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="СВЯЗЬ"		Tag="joint"			Click="Button_Click"/> -->
+		<!--	<Button Height="40" Style="{StaticResource MoveButtonStyle}" Content="КАМЕРА"		Tag="camera"		Click="Button_Click"/> -->
 			</StackPanel>
 		</ScrollViewer>
 	</Grid>

@@ -28,8 +28,8 @@
 	</UserControl.Resources>
 	<Grid Margin="0,0,-100,-85">
 		<Canvas>
-			<Button Canvas.Top="0" Canvas.Left="0" Width="280" Height="35" Style="{StaticResource BlockOutputStyle}"/>
-			<lmdControls:LMD_TextBox Canvas.Top="8" Canvas.Left="12"/>
+			<Button Canvas.Top="0" Canvas.Left="0" Width="280" Height="35" Style="{StaticResource BlockOutputStyle}" MouseEnter="Button_MouseEnter"/>
+			<lmdControls:LMD_TextBox x:Name="txtTextView" Canvas.Top="8" Canvas.Left="12"/>
 			<Expander Name="expander" Canvas.Top="2" Canvas.Left="250" Template="{StaticResource MyExpanderStyle}">
 				<StackPanel Margin="7, -29, 0, 0">
 					<Button Content="Связать" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
@@ -40,7 +40,7 @@
 					<Button Content="Удалить" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
 				</StackPanel>
 			</Expander>
-			<ComboBox Canvas.Top="3" Canvas.Left="180" Width="65" Height="20" />
+			<ComboBox x:Name="comboBox_variable" Canvas.Top="3" Canvas.Left="180" Width="65" Height="20" />
 		</Canvas>
 	</Grid>
 </UserControl>

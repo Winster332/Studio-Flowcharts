@@ -1,0 +1,47 @@
+﻿<Window x:Class="WPF_Test.LMD_GUI.LMD_WindowCreateProject"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:lmd="clr-namespace:WPF_Test.LMD_GUI"
+        Title="Создание проекта" Height="240" Width="450" 
+		Style="{StaticResource MyWindowStyle}" Loaded="Window_Loaded">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="35"/>
+			<RowDefinition Height="35"/>
+			<RowDefinition Height="35"/>
+			<RowDefinition Height="35"/>
+			<RowDefinition Height="35"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="150"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<StackPanel Grid.Row="6" Background="#444444" Grid.ColumnSpan="2" Orientation="Horizontal" >
+			<Image Width="30" Height="25" Margin="5"/>
+			<TextBlock Text=" - иконка приложения" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+			<Button Width="100" Height="30" Style="{StaticResource LMD_ButtonStyle}" Content="Создать" Margin="43, 0, 0, 0" HorizontalAlignment="Right" Click="Button_Click" Tag="CREATE"/>
+			<Button Width="100" Height="30" Style="{StaticResource LMD_ButtonStyle}" Content="Отменить" Margin="5, 0, 0, 0" HorizontalAlignment="Right" Click="Button_Click" Tag="CANCLE"/>
+		</StackPanel>
+		
+		<TextBlock Grid.Column="0" Grid.Row="0" Text="Название: " FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5, 0, 0, 0"/>
+		<lmd:LMD_TextBox x:Name="textBox_name" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Hello World"/>
+		<Button Grid.Column="1" Grid.Row="0" Width="100" Height="30" Style="{StaticResource LMD_ButtonStyle}" Content="Сгенерировать" Margin="0, 0, 5, 0" HorizontalAlignment="Right" VerticalAlignment="Center" Click="Button_Click_1"/>
+
+		<TextBlock Grid.Column="0" Grid.Row="1" Text="Путь проекта: " FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5, 0, 0, 0"/>
+		<lmd:LMD_TextBox x:Name="textBox_path" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Projects\"/>
+		<Button Grid.Column="1" Grid.Row="1" Width="100" Height="30" Style="{StaticResource LMD_ButtonStyle}" Content="Обзор" Margin="0, 0, 5, 0" HorizontalAlignment="Right" VerticalAlignment="Center"  Click="Button_Click_2"/>
+
+		<TextBlock Grid.Column="0" Grid.Row="2" Text="Язык генерации: " FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5, 0, 0, 0"/>
+		<ComboBox Name="cb_language" Grid.Row="2" Grid.Column="1" Width="170" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0"/>
+		<Button Grid.Column="1" Grid.Row="2" Width="100" Height="30" Style="{StaticResource LMD_ButtonStyle}" Content="Стандартный" Margin="0, 0, 5, 0" HorizontalAlignment="Right" VerticalAlignment="Center" Click="Button_Click_3" />
+
+		<TextBlock Grid.Column="0" Grid.Row="3" Text="Тип проекта: " FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5, 0, 0, 0"/>
+		<ComboBox Name="cb_type" Grid.Row="3" Grid.Column="1" Width="170" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0"/>
+		<Button Grid.Column="1" Grid.Row="3" Width="100" Height="30" Style="{StaticResource LMD_ButtonStyle}" Content="Стандартный" Margin="0, 0, 5, 0" HorizontalAlignment="Right" VerticalAlignment="Center" Click="Button_Click_4" />
+
+		<TextBlock Grid.Column="0" Grid.Row="4" Text="Иконка проекта: " FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5, 0, 0, 0"/>
+		<lmd:LMD_TextBox x:Name="textBox_icon" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Data\Settings\Icon.ico"/>
+		<Button Grid.Column="1" Grid.Row="4" Width="100" Height="30" Style="{StaticResource LMD_ButtonStyle}" Content="Обзор" Margin="0, 0, 5, 0" HorizontalAlignment="Right" VerticalAlignment="Center" Click="Button_Click_5"/>
+	</Grid>
+</Window>

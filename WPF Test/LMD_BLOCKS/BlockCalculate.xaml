@@ -28,8 +28,8 @@
     <Grid>
 		<Canvas>
 			<Button Canvas.Top="0" Canvas.Left="0" Width="280" Height="35" Style="{StaticResource BlockCalculateStyle}"/>
-			<lmdControls:LMD_TextBox Canvas.Top="8" Canvas.Left="12"/>
-			<Expander Name="expander" Canvas.Top="2" Canvas.Left="250" Template="{StaticResource MyExpanderStyle}">
+			<lmdControls:LMD_TextBox x:Name="txtView" Canvas.Top="8" Canvas.Left="5"/>
+			<Expander Name="expander" Canvas.Top="2" Canvas.Left="260" Template="{StaticResource MyExpanderStyle}">
 				<StackPanel Margin="7, -29, 0, 0">
 					<Button Content="Связать" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
 					<Button Content="Задать имя" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
@@ -39,7 +39,8 @@
 					<Button Content="Удалить" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
 				</StackPanel>
 			</Expander>
-			<Button Canvas.Left="195" Canvas.Top="10" Width="50" Height="15" Style="{StaticResource LMD_ButtonStyle}" Content="f(x)"/>
+			<Button Canvas.Left="182" Canvas.Top="10" Width="35" Height="15" Style="{StaticResource LMD_ButtonStyle}" Content="f(x)" Click="Button_Click_2"/>
+			<Button Canvas.Left="222" Canvas.Top="10" Width="35" Height="15" Style="{StaticResource LMD_ButtonStyle}" Content="var" Click="Button_Click_1"/>
 		</Canvas>
 	</Grid>
 </UserControl>

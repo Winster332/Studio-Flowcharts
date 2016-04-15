@@ -26,8 +26,6 @@ namespace WPF_Test.LMD_GUI
 		public LMD_ListBox()
 		{
 			InitializeComponent();
-
-			
 		}
 
 		public void AddItemText(String text)

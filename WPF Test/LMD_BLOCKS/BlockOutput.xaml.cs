@@ -20,13 +20,17 @@ namespace WPF_Test.LMD_BLOCKS
 	/// </summary>
 	public partial class BlockOutput : UserControl
 	{
+		#region variables
+		public delegate void ExpanderClickItems(EXPANDER_FUNCTION function, UIElement element);
+		public event ExpanderClickItems expanderClickItem;
+		#endregion
+		#region BlockOutput
 		public BlockOutput()
 		{
 			InitializeComponent();
 		}
-
-		public delegate void ExpanderClickItems(EXPANDER_FUNCTION function, UIElement element);
-		public event ExpanderClickItems expanderClickItem;
+		#endregion
+		#region Button click to menu
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			expander.IsExpanded = false;
@@ -47,5 +51,37 @@ namespace WPF_Test.LMD_BLOCKS
 			if (expanderClickItem != null)
 				expanderClickItem(func, this);
 		}
+		#endregion
+		#region Button mouse event
+		private void Button_MouseEnter(object sender, MouseEventArgs e)
+		{
+			UpDateComboBox();
+		}
+		#endregion
+		#region UpDateComboBox
+		public void UpDateComboBox()
+		{
+			String present_text = comboBox_variable.Text;
+			comboBox_variable.Items.Clear();
+
+			List<LMD_Compiling.INFO_VARIABLE> list = LMD_Compiling.ManagerVariables.GetAllVariables();
+			for (int i = 0; i < LMD_Compiling.ManagerVariables.Count; i++)
+				comboBox_variable.Items.Add(list[i].name);
+
+			comboBox_variable.Text = present_text;
+		}
+		#endregion
+		#region GetText
+		public String GetText()
+		{
+			return txtTextView.Text;
+		}
+		#endregion
+		#region GetVariable
+		public String GetVariable()
+		{
+			return comboBox_variable.Text;
+		}
+		#endregion
 	}
 }

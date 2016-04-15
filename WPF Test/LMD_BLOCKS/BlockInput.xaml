@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 			 xmlns:lmdControls="clr-namespace:WPF_Test.LMD_GUI"
              mc:Ignorable="d" 
-             d:DesignHeight="35" d:DesignWidth="280">
+             d:DesignHeight="35" d:DesignWidth="320">
 
 	<UserControl.Resources>
 		<Style x:Key="BlockOutputStyle" TargetType="Button">
@@ -14,7 +14,7 @@
 					<ControlTemplate TargetType="Button">
 						<Grid>
 							<ContentControl HorizontalAlignment="Center" VerticalAlignment="Center"/>
-							<Polygon Name="polygon" StrokeThickness="2" Fill="#555555" Points="10, 0, 280, 0, 270, 35, 0, 35"/>
+							<Polygon Name="polygon" StrokeThickness="2" Fill="#555555" Points="10, 0, 320, 0, 310, 35, 0, 35"/>
 						</Grid>
 						<ControlTemplate.Triggers>
 							<Trigger Property="IsMouseOver" Value="True">
@@ -28,9 +28,9 @@
 	</UserControl.Resources>
 	<Grid Margin="0,0,-100,-85">
 		<Canvas>
-			<Button Canvas.Top="0" Canvas.Left="0" Width="280" Height="35" Style="{StaticResource BlockOutputStyle}"/>
-			<lmdControls:LMD_TextBox Canvas.Top="8" Canvas.Left="12"/>
-			<Expander Name="expander" Canvas.Top="2" Canvas.Left="250" Template="{StaticResource MyExpanderStyle}">
+			<Button Canvas.Top="0" Canvas.Left="0" Width="320" Height="35" Style="{StaticResource BlockOutputStyle}" MouseEnter="Button_MouseEnter"/>
+			<lmdControls:LMD_TextBox x:Name="txtBox_view" Canvas.Top="8" Canvas.Left="12"/>
+			<Expander Name="expander" Canvas.Top="2" Canvas.Left="290" Template="{StaticResource MyExpanderStyle}">
 				<StackPanel Margin="7, -29, 0, 0">
 					<Button Content="Связать" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
 					<Button Content="Задать имя" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
@@ -40,7 +40,8 @@
 					<Button Content="Удалить" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
 				</StackPanel>
 			</Expander>
-			<TextBox Canvas.Top="8" Canvas.Left="190" Width="55" Height="20" Background="#888888" BorderBrush="#444444" BorderThickness="0" Foreground="#CCCCCC"/>
+			<ComboBox Name="comboBox_all_variables" Canvas.Left="180" Width="70" />
+			<Button Width="30" Height="20" Content="var" Style="{StaticResource LMD_ButtonStyle}" Canvas.Left="260" Canvas.Top="8" Click="Button_Click_1"/>
 		</Canvas>
 	</Grid>
 </UserControl>

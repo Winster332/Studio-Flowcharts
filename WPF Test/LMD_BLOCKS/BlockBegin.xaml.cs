@@ -21,13 +21,17 @@ namespace WPF_Test.LMD_BLOCKS
 	/// </summary>
 	public partial class BlockBegin : UserControl
 	{
+		#region variables
+		public delegate void ExpanderClickItems(EXPANDER_FUNCTION function, UIElement element);
+		public event ExpanderClickItems expanderClickItem;
+		#endregion 
+		#region BlockBegin
 		public BlockBegin()
 		{
 			InitializeComponent();
 		}
-
-		public delegate void ExpanderClickItems(EXPANDER_FUNCTION function, UIElement element);
-		public event ExpanderClickItems expanderClickItem;
+		#endregion
+		#region Button click
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			expander.IsExpanded = false;
@@ -48,5 +52,6 @@ namespace WPF_Test.LMD_BLOCKS
 			if (expanderClickItem != null)
 				expanderClickItem(func, this);
 		}
+		#endregion
 	}
 }

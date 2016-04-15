@@ -58,7 +58,7 @@
 			<Line Stroke="#309955" StrokeThickness="2" X1="290" Y1="50" X2="340" Y2="50"/>
 			
 			<Button Style="{StaticResource BlockConditionStyle}"/>
-			<lmdControls:LMD_TextBox Canvas.Left="90" Canvas.Top="40"/>
+			<lmdControls:LMD_TextBox x:Name="txtView" Canvas.Left="90" Canvas.Top="40"/>
 			<Expander Name="expander" Canvas.Left="164" Margin="0, 8, 0, 0" Template="{StaticResource MyExpanderStyle}">
 				<StackPanel Margin="7, -29, 0, 0">
 					<Button Content="Связать" Height="20" Style="{StaticResource MyItemExpanderStyle}" Click="Button_Click"/>
@@ -70,13 +70,14 @@
 				</StackPanel>
 			</Expander>
 
-			<TextBlock Text="+" Canvas.Top="33" Canvas.Left="270" FontSize="20" Foreground="#CCCCCC"/>
-			<TextBlock Text="-" Canvas.Top="30" Canvas.Left="63" FontSize="25" Foreground="#CCCCCC"/>
+			<TextBlock Text="+" Canvas.Top="33" Canvas.Left="63" FontSize="20" Foreground="#CCCCCC"/>
+			<TextBlock Text="-" Canvas.Top="30" Canvas.Left="270" FontSize="25" Foreground="#CCCCCC"/>
 
 			<Button Canvas.Left="0" Canvas.Top="40" Width="20" Height="20" Click="Button_Click_1" Style="{StaticResource EllipseJointStyle}"/>
 			<Button Canvas.Left="330" Canvas.Top="40" Width="20" Height="20" Click="Button_Click_2" Style="{StaticResource EllipseJointStyle}"/>
 		<!--	<lmdControls:LMD_CircleExpander Canvas.Top="40" Canvas.Left="0"/>
 			<lmdControls:LMD_CircleExpander Canvas.Top="40" Canvas.Left="330"/> -->
+			<Button Canvas.Left="160" Canvas.Top="67" Width="35" Height="15" Style="{StaticResource LMD_ButtonStyle}" Content="f(x)" Click="Button_Click_3"/>
 		</Canvas>
 	</Grid>
 </UserControl>

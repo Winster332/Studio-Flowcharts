@@ -20,16 +20,25 @@ namespace WPF_Test.LMD_GUI
 	/// </summary>
 	public partial class LMD_TopPanel : UserControl
 	{
-		public delegate void Run();
-		public event Run run;
+		#region variables
+		public delegate void EventButtonClick(String cmd);
+		public event EventButtonClick run;
+		#endregion
+		#region LMD_TopPanel
 		public LMD_TopPanel()
 		{
 			InitializeComponent();
 		}
-
+		#endregion
+		#region Button click cmd
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			run();
+			String cmd = ((Button)sender).Tag.ToString();
+
+			if (cmd != null)
+				if (run != null)
+					run(cmd);
 		}
+		#endregion
 	}
 }

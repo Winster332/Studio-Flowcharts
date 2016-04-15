@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<INFO_PROJECT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Language>C_SHARP</Language>
+  <count_block>0</count_block>
+  <name>Hello TProger</name>
+  <path>Projects\</path>
+  <path_icon>Data\Settings\Icon.ico</path_icon>
+  <Type>EXE</Type>
+  <workspace_width>0</workspace_width>
+  <workspace_height>0</workspace_height>
+</INFO_PROJECT>
